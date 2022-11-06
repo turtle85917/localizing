@@ -1,6 +1,6 @@
 import Locale, { bundle } from "./locale";
 
-const lang = "ko-KR";
+const lang = "ko";
 
 Locale.init();
 
