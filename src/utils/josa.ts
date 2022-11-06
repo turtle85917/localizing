@@ -1,5 +1,3 @@
-import { Func } from "../@types";
-
 const functions: Func[] = [
   (content: string) => hasJong(content) ? "을 " : "를",
   (content: string) => hasJong(content) ? "은" : "는",
@@ -50,3 +48,5 @@ export function hasJong(content: string) {
   const code = content.charCodeAt(content.length - 1);
   return (code - 0xac00) % 28 > 0;
 }
+
+export type Func = (content: string) => string;

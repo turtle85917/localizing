@@ -1,1 +1,0 @@
-export type Func = (content: string) => string;

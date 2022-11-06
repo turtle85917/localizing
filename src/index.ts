@@ -11,8 +11,8 @@ console.log(bundle.format(lang, "ACTION.EAT.YUM", bundle.get("ITEM.APPLE.NAME", 
 
 console.log("---------------------------------------------------------");
 
-console.log(bundle.format(lang, "ACTION.ATTACK", bundle.get("ENEMEY.NOOB_SLIME.NAME", lang)));
-console.log(bundle.format(lang, "ACTION.ATTACK.FAIL", bundle.get("ENEMEY.NOOB_SLIME.NAME", lang)));
+console.log(bundle.format(lang, "ACTION.ATTACK", bundle.get("ENEMEY.NOOB_SLIME.NAME", lang))); // 초보자들을 위한 슬라임을 공격하시겠습니까?\n[참고 : 마나가 5 감소됩니다.]
+console.log(bundle.format(lang, "ACTION.ATTACK.FAIL", bundle.get("ENEMEY.NOOB_SLIME.NAME", lang))); // 앗...! 공격에 실패했다!! 초보자들을 위한 슬라임이 반격을 준비합니다.
 
 console.log("---------------------------------------------------------");
 
