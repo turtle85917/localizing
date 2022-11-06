@@ -5,7 +5,7 @@ module Locale {
   const dictionary: Map<string, properties.Reader> = new Map();
 
   export function init() {
-    ["en-US", "ko-KR"]
+    ["en-UK", "en-US", "ko"]
       .forEach(lang => {
         try {
           dictionary.set(lang, properties(`./src/locale/bundle.${lang}.properties`));
