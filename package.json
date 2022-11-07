@@ -10,8 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/properties-reader": "^2.1.1",
-    "properties-reader": "^2.2.0",
     "tslib": "^2.4.1"
   },
   "devDependencies": {

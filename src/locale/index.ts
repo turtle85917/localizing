@@ -1,14 +1,16 @@
-import properties from "properties-reader";
+import properties from "../utils/properties";
 import josa from "../utils/josa";
 
-module Locale {
-  const dictionary: Map<string, properties.Reader> = new Map();
+namespace Locale {
+  const dictionary: Map<string, properties> = new Map();
 
   export function init() {
+    const p = new properties();
+
     ["en-UK", "en-US", "ko"]
       .forEach(lang => {
         try {
-          dictionary.set(lang, properties(`./src/locale/bundle.${lang}.properties`));
+          dictionary.set(lang, p.init(`./src/locale/bundle.${lang}.properties`));
         } catch (ignore) {}
       });
   }

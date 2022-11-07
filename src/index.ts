@@ -4,6 +4,10 @@ const lang = "ko";
 
 Locale.init();
 
+// const p = new properties();
+// p.init("./src/locale/bundle.en-US.properties");
+// console.log(p.get("TITLE"));
+
 console.log("---------------------------------------------------------");
 
 console.log(bundle.format(lang, "ACTION.EAT", bundle.get("ITEM.APPLE.NAME", lang))); // 사과를 드시겠습니까?
