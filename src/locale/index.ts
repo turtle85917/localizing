@@ -5,11 +5,10 @@ namespace Locale {
   const dictionary: Map<string, properties> = new Map();
 
   export function init() {
-    const p = new properties();
-
     ["en-UK", "en-US", "ko"]
       .forEach(lang => {
         try {
+          const p = new properties();
           dictionary.set(lang, p.init(`./src/locale/bundle.${lang}.properties`));
         } catch (ignore) {}
       });
