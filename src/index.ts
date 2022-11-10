@@ -11,7 +11,7 @@ Locale.init();
 console.log("---------------------------------------------------------");
 
 console.log(bundle.format(lang, "ACTION.EAT", bundle.get("ITEM.APPLE.NAME", lang))); // 사과를 드시겠습니까?
-console.log(bundle.format(lang, "ACTION.EAT.YUM", bundle.get("ITEM.APPLE.NAME", lang))); // 냠냠... 사과를 먹어 체력이 늘어났어요!
+console.log(bundle.format("en-US", "ACTION.EAT.YUM", bundle.get("ITEM.APPLE.NAME", "en-US"))); // Yum yum... You ate an Apple and recovered your health!
 
 console.log("---------------------------------------------------------");
 
