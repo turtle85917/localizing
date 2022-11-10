@@ -13,8 +13,9 @@ export default class Properties {
     this.content = fs.readFileSync(src, "utf-8");
     const properties = this.content.split("\n").filter(v=>v);
     properties.forEach(property => {
-      const key = property.split("=")[0].trim();
-      const value = property.split("=").slice(1).join("=").trim();
+      const split = property.split('=');
+      const key = split[0].trim();
+      const value = split.slice(1).join("=").trim();
 
       this.object[key] = value;
     });
@@ -24,5 +25,11 @@ export default class Properties {
 
   get(propertyName: string) {
     return this.object[propertyName] ?? undefined;
+  }
+
+  toJSON(decode?: boolean) {
+    if (decode) {
+    }
+    return this.object;
   }
 }
